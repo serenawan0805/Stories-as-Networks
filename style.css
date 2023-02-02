@@ -1,14 +1,16 @@
-*{
-    margin: 0;
-    padding: 0;
+body {
+    background: #fff;
+    font-family: 'Patrick Hand', cursive;
+    border: black 5px dotted;
 }
-body{
+
+/* body{
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: radial-gradient(circle at center,#333,#000);
-}
+} */
 
 .container{
     width: 500px;
@@ -22,64 +24,77 @@ body{
     animation-play-state: paused;
 }
 
-/* 外层div 图片的样式 */
 .out-div img{
     width: 200px;
     height: 200px;
-    /* 对图片进行剪切，保留原始比例 */
     object-fit: cover;
 }
-/* 内层div 图片的样式 */
+
 .in-div img{
     width: 100px;
     height: 100px;
-    /* 对图片进行剪切，保留原始比例 */
     object-fit: cover;
 }
-/* 盒子 */
+
 .box{
     position: absolute;
     width: 200px;
     height: 200px;
-    /* 开启3D效果 */
     transform-style: preserve-3d;
-    /* 执行动画：动画名 时长 线性的 无限次播放 */
     animation: rotateAnimate 10s linear infinite;
 }
-/* 外层div 统一的样式 */
+
 .out-div{
     width: 200px;
     height: 200px;
     position: absolute;
-    /* 动画过渡 */
     transition: transform 1s ease-in;
 }
-/* 外层div 单独的样式 */
-/* 前 */
+
 .out-front{
     transform: translateZ(100px);
+    background-color: #fff;
+    border: black 5px dotted;
 }
-/* 后 */
+
+a {
+    position: absolute;
+    font-size: 150px;
+    left: 60px;
+    top: -20px;
+    color: #000;
+}
+
 .out-back{
     transform: translateZ(-100px) rotateY(180deg);
+    background-color: #fff;
+    border: black 5px dotted;
 }
-/* 左 */
+
 .out-left{
     transform: translateX(-100px) rotateY(-90deg);
+    background-color: #fff;
+    border: black 5px dotted;
 }
-/* 右 */
+
 .out-right{
     transform: translateX(100px) rotateY(90deg);
+    background-color: #fff;
+    border: black 5px dotted;
 }
-/* 上 */
+
 .out-top{
     transform: translateY(-100px) rotateX(90deg);
+    background-color: #fff;
+    border: black 5px dotted;
 }
-/* 下 */
+
 .out-bottom{
     transform: translateY(100px) rotateX(-90deg);
+    background-color: #fff;
+    border: black 5px dotted;
 }
-/* 鼠标移入，外层div各个面的样式变化 */
+
 .container:hover .out-front{
     transform: translateZ(200px);
 }
@@ -98,7 +113,7 @@ body{
 .container:hover .out-bottom{
     transform: translateY(200px) rotateX(-90deg);
 }
-/* 内层div 统一的样式 */
+
 .in-div{
     margin-left: 50px;
     margin-top: 50px;
@@ -106,38 +121,79 @@ body{
     height: 100px;
     position: absolute;
 }
-/* 内层div 单独的样式 */
-/* 前 */
+
 .in-front{
     transform: translateZ(50px);
 }
-/* 后 */
+
 .in-back{
     transform: translateZ(-50px) rotateY(180deg);
 }
-/* 左 */
+
 .in-left{
     transform: translateX(-50px) rotateY(-90deg);
 }
-/* 右 */
+
 .in-right{
     transform: translateX(50px) rotateY(90deg);
 }
-/* 上 */
+
 .in-top{
     transform: translateY(-50px) rotateX(90deg);
 }
-/* 下 */
+
 .in-bottom{
     transform: translateY(50px) rotateX(-90deg);
 }
 
-/* 定义动画 */
+
 @keyframes rotateAnimate {
     0%{
         transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     }
     100%{
         transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+@media (min-width: 770px) and (max-width: 850px) {
+    #headingGroup h1{
+        font-size: 60px;
+    }
+}
+
+@media (min-width: 750px) and (max-width: 850px) {
+    #headingGroup h1{
+        font-size: 70px;
+    }
+}
+
+@media (min-width: 850px) and (max-width: 991px) {
+    #headingGroup h1{
+        font-size: 80px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1250px) {
+    #headingGroup h1{
+        font-size: 65px;
+    }
+}
+
+@media (min-width: 1250px) and (max-width: 1500px) {
+    #headingGroup h1{
+        font-size: 85px;
+    }
+}
+
+@media (min-width: 1500px) and (max-width: 2000px) {
+    #headingGroup h1{
+        font-size: 100px;
+    }
+}
+
+@media (min-width: 2000px) and (max-width: 2500px){
+    #headingGroup h1{
+        font-size: 125px;
     }
 }
